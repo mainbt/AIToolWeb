@@ -38,7 +38,7 @@ def process_data(data):
         img_reshape = resized[np.newaxis,...]  
         prediction = model.predict(img_reshape).argmax()
 
-        return map_dict[prediction]
+        return { "result": map_dict[prediction] }
 
 if __name__ == '__main__':
     app.run()
