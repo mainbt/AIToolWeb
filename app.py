@@ -1,5 +1,4 @@
 import cv2
-import pandas as pd
 import numpy as np
 from flask import Flask, request, jsonify
 import tensorflow as tf
