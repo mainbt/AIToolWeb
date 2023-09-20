@@ -2,11 +2,14 @@ import cv2
 import numpy as np
 import streamlit as st
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2,preprocess_input as mobilenet_v2_preprocess_input
 
 app = Flask(__name__)
+
+CORS(app)
 
 model = tf.keras.models.load_model("saved_model/MobileNetV2_retrain")
 
